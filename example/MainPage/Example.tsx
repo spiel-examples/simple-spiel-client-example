@@ -1,4 +1,4 @@
-import {h, Component, router} from 'spiel-client';
+import {h, Component, srouter} from 'spiel-client';
 import 'aframe';
 
 export class Example {
@@ -12,22 +12,22 @@ export class Example {
                 <h1>{state.title}</h1>
                 <button
                     onclick = {() => {
-                        router.go('/home/child/5');
+                        srouter.go('/home/child/5');
                     }}
                 >go to child</button>
                 <button
                     onclick = {() => {
-                        router.go('/home/child/2/child2/primo');
+                        srouter.go('/home/child/2/child2/primo');
                     }}
                 >go to child 2</button>
                 <button
                     onclick = {() => {
-                        router.go('/home/brother');
+                        srouter.go('/home/brother');
                     }}
                 >go to child brother</button>
                 <button
                     onclick = {() => {
-                        router.go('/aframe');
+                        srouter.go('/aframe');
                     }}
                 >go to aframe</button>
             </div>

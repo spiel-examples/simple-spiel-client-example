@@ -1,4 +1,4 @@
-import {h, Component, render, router, patch, Page, State} from 'spiel-client';
+import {h, Component, render, patch, Page, State} from 'spiel-client';
 
 export class NotFound implements Page{
     state = {

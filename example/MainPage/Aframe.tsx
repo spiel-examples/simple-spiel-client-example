@@ -1,9 +1,8 @@
-import {h, Component, render, router} from 'spiel-client';
+import { h, Component, render } from 'spiel-client';
 import 'aframe';
 
 export class Aframe {
     state = {
-        title: 'hello brother'
     }
 
     view(state: any) {

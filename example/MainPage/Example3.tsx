@@ -1,4 +1,4 @@
-import {h, Component, render, router} from 'spiel-client';
+import {h, Component, render, srouter} from 'spiel-client';
 
 export class Example3 {
     state = {
@@ -17,7 +17,7 @@ export class Example3 {
                 >Change Title</button>
                 <button
                     onclick = {() => {
-                        router.go('/home');
+                        srouter.go('/home');
                     }}
                 >go to root</button>
             </div>
