@@ -1,7 +1,7 @@
-import {h, Component, srouter} from 'spiel-client';
+import {createNode, srouter, IPage} from 'spiel-client';
 import 'aframe';
 
-export class Example {
+export class Example implements IPage {
     state = {
         title: 'Hello world'
     }

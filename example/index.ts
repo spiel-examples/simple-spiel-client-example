@@ -1,9 +1,9 @@
 import 'es6-shim';
-import { srouter, ConfigRouters } from 'spiel-client';
+import { srouter, IConfigRouters } from 'spiel-client';
 import {example, example2, example3, example4, aframe, notFound} from './MainPage';
 import {hooks, genericHooks} from './hooks'
 
-const configRouters: ConfigRouters = {
+const configRouters: IConfigRouters = {
     default: '/home',
     genericHooks: genericHooks,
     notFound: true,

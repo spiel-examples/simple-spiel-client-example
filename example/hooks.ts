@@ -1,8 +1,6 @@
-import {Hooks, Params} from 'spiel-client';
+import {IHooks, IGenericHooks, Params} from 'spiel-client';
 
-type hooks = Hooks;
-
-export const hooks = {
+export const hooks: IHooks = {
     before: (done: (suppress?: boolean) => void, params: Params) => {
         params.number = +params.number + 2;
         console.log("before");
@@ -19,7 +17,7 @@ export const hooks = {
     }
 }
 
-export const genericHooks = {
+export const genericHooks: IGenericHooks = {
     before: (done: (suppress?: boolean) => void) => {
         console.log("generic before");
         done();

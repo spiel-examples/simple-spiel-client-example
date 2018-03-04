@@ -1,11 +1,11 @@
-import {h, Component, render, srouter, State, JSXElements, Children} from 'spiel-client';
+import {createNode, render, srouter, State, JSXElements, Children, IPage} from 'spiel-client';
 
 interface Show {
     value: string;
     onGo: Function;
 }
 
-export class Example4 {
+export class Example4 implements IPage {
     state = {
         title: 'hello brother'
     }

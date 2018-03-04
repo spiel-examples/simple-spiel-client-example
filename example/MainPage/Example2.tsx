@@ -1,6 +1,6 @@
-import {h, Component, render, srouter} from 'spiel-client';
+import {createNode, render, srouter, IPage} from 'spiel-client';
 
-export class Example2 {
+export class Example2 implements IPage {
     state = {
         title: 'Hello'
     }
@@ -17,10 +17,16 @@ export class Example2 {
             <div>
                 {(state.title === 'Hello Paco') ? 
                 <span 
-                    oncreate={() => console.log('the element is created')}
-                    onremove={() => console.log('the element is removed')}
+                    oncreate={() => console.log('the change title is created')}
+                    onupdate={() => console.log('the change title is updated')}
+                    ondestroy={() => console.log('the change title is destroyed')}
                 >Title change</span>: null}
-                <h1>{state.title} {state.params.number}</h1>
+                <h1 
+                    key="title"
+                    oncreate={() => console.log('the title is created')}
+                    onupdate={() => console.log('the title is updated')}
+                    ondestroy={() => console.log('the title is destroyed')}
+                >{state.title} {state.params.number}</h1>
                 <button
                     onclick ={() => {
                         state.title = (state.title === 'Hello') ? 'Hello Paco': 'Hello';
