@@ -1,4 +1,4 @@
-import {createNode, srouter, IPage} from 'spiel-client';
+import {h, srouter, IPage} from 'spiel-client';
 import 'aframe';
 
 export class Example implements IPage {

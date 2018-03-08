@@ -1,4 +1,4 @@
-import {createNode, render, srouter, State, JSXElements, Children, IPage} from 'spiel-client';
+import {h, render, srouter, State, JSXElements, Children, IPage} from 'spiel-client';
 
 interface Show {
     value: string;

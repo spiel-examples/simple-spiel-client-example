@@ -1,4 +1,4 @@
-import { createNode, render, IPage } from 'spiel-client';
+import { h, render, IPage } from 'spiel-client';
 import 'aframe';
 
 export class Aframe implements IPage {

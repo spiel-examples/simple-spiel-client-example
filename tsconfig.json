@@ -10,7 +10,7 @@
 		"outDir": "./lib",
 		"rootDir": ".",
 		"jsx": "react",
-		"jsxFactory": "createNode"
+		"jsxFactory": "h"
 	},
 	"include": [
 		"./src",

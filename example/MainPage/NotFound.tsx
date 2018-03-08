@@ -1,4 +1,4 @@
-import {createNode, Component, render, patch, IPage, State} from 'spiel-client';
+import {h, Component, render, patch, IPage, State} from 'spiel-client';
 
 export class NotFound implements IPage{
     state = {
