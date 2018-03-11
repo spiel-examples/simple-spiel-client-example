@@ -11,7 +11,7 @@ export class Example3 implements IPage {
                 <h1>{state.title} {state.params.word} {state.params.number}</h1>
                 <button
                     onclick ={() => {
-                        state.title = 'Claro Paco';
+                        state.title = 'Of course Spiel';
                         render(example3.view, state)
                     }}
                 >Change Title</button>

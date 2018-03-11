@@ -14,13 +14,13 @@
   "author": "Francisco Jesus Navarro Cortes",
   "license": "MIT",
   "dependencies": {
-    "@types/aframe": "^0.7.0",
-    "@types/es6-shim": "^0.31.35",
+    "@types/aframe": "^0.7.1",
+    "@types/es6-shim": "^0.31.36",
     "@types/reflect-metadata": "^0.1.0",
     "aframe": "^0.7.1",
     "es6-shim": "^0.35.3",
     "injection-js": "^2.2.1",
-    "spiel-client": "^1.1.0"
+    "spiel-client": "^1.2.0"
   },
   "devDependencies": {
     "babel-minify-webpack-plugin": "^0.2.0",

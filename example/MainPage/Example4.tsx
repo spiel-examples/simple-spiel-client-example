@@ -1,32 +1,35 @@
-import {h, render, srouter, State, JSXElements, Children, IPage} from 'spiel-client';
-
-interface Show {
-    value: string;
-    onGo: Function;
-}
+import {h, render, srouter, State, JSXElements, IPage} from 'spiel-client';
+import {Show, ShowChild} from "../components";
 
 export class Example4 implements IPage {
     state = {
-        title: 'hello brother'
+        title: 'Hello brother',
+        text: "And this is its child"
     }
 
     view(state: State): JSXElements {
         return(
-            <Show value={state.text} onGo={()=> srouter.go('/')}>
-                <span>And this is its child</span>
+            <Show 
+                title={state.title}
+                onChangeTitle={() => {
+                    state.title = state.title === ("Hello component") ?
+                                                  "Hello Spiel component":  
+                                                  "Hello component";
+                    render(example4.view, state);
+                }}
+                onGo={()=> srouter.go("/home")}>
+                <ShowChild 
+                    text={state.text}
+                    onChangeText = {() => {
+                        state.text = state.text === ("And this is its child component") ?
+                                                    "And this is its updated child component":
+                                                    "And this is its child component";
+                        render(example4.view, state);
+                    }}>
+                </ShowChild>
             </Show>
         )
     }
-}
-
-function Show ({value, onGo}: Show, children: Children) {
-    return (
-        <div oncreate ={() => console.log('the component is created')}>
-            <span>{value}</span>
-            <div id='child'>{children}</div>
-            <button id="go-parent" onclick={() => srouter.go('/home')}>Go to root</button>
-        </div>
-    )
 }
 
 export const example4 = new Example4();
