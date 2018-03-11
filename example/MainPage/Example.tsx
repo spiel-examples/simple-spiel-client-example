@@ -22,9 +22,9 @@ export class Example implements IPage {
                 >go to child 2</button>
                 <button
                     onclick = {() => {
-                        srouter.go('/home/brother');
+                        srouter.go('/home/component');
                     }}
-                >go to child brother</button>
+                >go to child component</button>
                 <button
                     onclick = {() => {
                         srouter.go('/aframe');

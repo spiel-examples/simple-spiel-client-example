@@ -21,7 +21,7 @@ const configRouters: IConfigRouters = {
                 page: example3
             }]
         },{
-            path: '/brother',
+            path: '/component',
             page: example4
         }]
     },
