@@ -17,7 +17,7 @@ export class Example implements IPage {
                 >go to child</button>
                 <button
                     onclick = {() => {
-                        srouter.go('/home/child/2/child2/primo');
+                        srouter.go('/home/child/2/child2/param');
                     }}
                 >go to child 2</button>
                 <button

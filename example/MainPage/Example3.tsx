@@ -2,7 +2,7 @@ import {h, render, srouter, IPage} from 'spiel-client';
 
 export class Example3 implements IPage {
     state = {
-        title: 'Si noo'
+        title: 'Yes'
     }
 
     view(state: any) {

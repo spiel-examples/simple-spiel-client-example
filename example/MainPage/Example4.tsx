@@ -3,8 +3,8 @@ import {Show, ShowChild} from "../components";
 
 export class Example4 implements IPage {
     state = {
-        title: 'Hello brother',
-        text: "And this is its child"
+        title: 'Hello component',
+        text: "And this is its child component"
     }
 
     view(state: State): JSXElements {
