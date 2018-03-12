@@ -9,7 +9,14 @@ export class Example2Controller {
     }
 
     changeTitle() {
-        this.state.title = (this.state.title === 'Hello') ? 'Hello Spiel': 'Hello';
-        render(example2.view, this.state)
+        const promise = new Promise((resolve) => {
+            const title = (this.state.title === 'Hello') ? 'Hello Spiel': 'Hello';
+            resolve(title);
+        });
+
+        promise.then(data => {
+            this.state.title = data;
+            render(example2.view, this.state)
+        });
     }
 }
