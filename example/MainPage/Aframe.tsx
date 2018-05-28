@@ -1,11 +1,11 @@
-import { h, render, IPage } from 'spiel-client';
+import { h, IPage } from "spiel-ultradom";
 import 'aframe';
 
-export class Aframe implements IPage {
-    state = {
-    }
+export const aframe: IPage = {
+    state : {
+    },
 
-    view(state: any) {
+    view: (state: any) => {
         return (
         <div>
             <a-scene>
@@ -18,6 +18,4 @@ export class Aframe implements IPage {
         </div>
         )
     }
-}
-
-export const aframe = new Aframe();
+};

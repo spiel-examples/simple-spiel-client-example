@@ -1,4 +1,5 @@
-import { h, Children } from "spiel-client";
+import { h } from "spiel-ultradom";
+import { Children } from "ultradom";
 
 export interface Show {
     title: string;

@@ -1,22 +1,22 @@
-import {render, State} from "spiel-client";
-import {example2} from "./Example2";
+import {change} from "spiel-ultradom";
+import {example2, IExample2} from "./Example2";
 
 export class Example2Controller {
-    state: State
+    state: IExample2
 
-    constructor(state: State) {
+    constructor(state: IExample2) {
         this.state = state;
     }
 
     changeTitle() {
-        const promise = new Promise((resolve) => {
+        const promise: Promise<string> = new Promise((resolve) => {
             const title = (this.state.title === 'Hello') ? 'Hello Spiel': 'Hello';
             resolve(title);
         });
 
-        promise.then(data => {
+        promise.then((data) => {
             this.state.title = data;
-            render(example2.view, this.state)
+            change(example2.view, this.state)
         });
     }
 }

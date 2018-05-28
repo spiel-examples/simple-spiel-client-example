@@ -1,12 +1,17 @@
-import {h, render, srouter, IPage} from "spiel-client";
+import {h, ultraBuilder, IPage} from "spiel-ultradom";
 import { Example2Controller } from "./Example2Controller"
 
-export class Example2 implements IPage {
-    state = {
-        title: 'Hello'
-    }
+export interface IExample2 {
+    params: {number: number};
+    title: string;
+}
 
-    view(state: any) {
+export const example2: IPage = {
+    state: {
+        title: 'Hello'
+    },
+
+    view: (state: IExample2) => {
         const element = document.createElement('div');
         const controller = new Example2Controller(state);
 
@@ -35,17 +40,11 @@ export class Example2 implements IPage {
 
                 <button
                     onclick = {() => {
-                        srouter.go('/home');
+                        ultraBuilder.go('/home');
                     }}
                 >go to root</button>
                 <button onclick={() => addElement()}>add element</button>
             </div>
         )
     }
-
-    removeElement() {
-        
-    }
 }
-
-export const example2 = new Example2();

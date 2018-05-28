@@ -1,22 +1,22 @@
 import 'es6-shim';
-import { srouter, IConfigRouters } from 'spiel-client';
+import { ultraBuilder, IConfigRouter } from 'spiel-ultradom';
 import {example, example2, example3, example4, aframe, notFound} from './MainPage';
 import {hooks, genericHooks} from './hooks'
 
-const configRouters: IConfigRouters = {
+const configRouter: IConfigRouter = {
     default: '/home',
     genericHooks: genericHooks,
     notFound: true,
     notFoundPath: '/not-found',
     hash: '#!',
-    routers: [{
+    routes: [{
         path: '/home',
         page: example,
-        routers: [{
+        routes: [{
             path: '/child/:number',
             page: example2,
             hooks: hooks,
-            routers: [{
+            routes: [{
                 path: '/child2/:word',
                 page: example3
             }]
@@ -35,4 +35,4 @@ const configRouters: IConfigRouters = {
     }]
 };
 
-srouter.setRouters(configRouters).resolve();
+ultraBuilder.setRouter(configRouter).resolve();

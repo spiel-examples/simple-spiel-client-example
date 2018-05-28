@@ -1,11 +1,11 @@
-import {h, Component, render, patch, IPage, State} from 'spiel-client';
+import {h, IPage } from 'spiel-ultradom';
 
-export class NotFound implements IPage{
-    state = {
+export const notFound: IPage = {
+    state: {
         message: 'Page not found sorry'
-    }
+    },
 
-    view(state: State) {
+    view: (state: {message: string}) => {
         return (
             <div>
                 <h1>{state.message}</h1>
@@ -13,5 +13,3 @@ export class NotFound implements IPage{
         )
     }
 }
-
-export const notFound = new NotFound();

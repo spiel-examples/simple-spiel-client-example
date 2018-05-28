@@ -1,7 +1,7 @@
-import {IHooks, IGenericHooks, Params} from 'spiel-client';
+import {IHooks, IGenericHooks} from 'spiel-build';
 
 export const hooks: IHooks = {
-    before: (done: (suppress?: boolean) => void, params: Params) => {
+    before: (done: (suppress?: boolean) => void, params: {number: number}) => {
         params.number = +params.number + 2;
         console.log("before");
         done();

@@ -1,28 +1,26 @@
-import {h, render, srouter, IPage} from 'spiel-client';
+import {h, change, ultraBuilder, IPage} from 'spiel-ultradom';
 
-export class Example3 implements IPage {
-    state = {
+export const example3: IPage = {
+    state: {
         title: 'Yes'
-    }
+    },
 
-    view(state: any) {
+    view: (state: any) => {
         return (
             <div>
                 <h1>{state.title} {state.params.word} {state.params.number}</h1>
                 <button
                     onclick ={() => {
                         state.title = 'Of course Spiel';
-                        render(example3.view, state)
+                        change(example3.view, state)
                     }}
                 >Change Title</button>
                 <button
                     onclick = {() => {
-                        srouter.go('/home');
+                        ultraBuilder.go('/home');
                     }}
                 >go to root</button>
             </div>
         )
     }
 }
-
-export const example3 = new Example3();
